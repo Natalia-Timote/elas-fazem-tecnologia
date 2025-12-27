@@ -1,0 +1,21 @@
+import './App.css'
+import EventForm from './components/EventForm'
+
+function App() {
+  return (
+    <>
+      <header>
+        <img src="./logo.png" alt="Logo - Elas fazem tecnologia" />
+      </header>
+      <main>
+        <img src="./banner-home.jpg" alt="Banner com ilustração de mulheres diversas utilizando tecnologia." />
+        <EventForm />
+      </main>
+      <footer>
+      <h2>oi</h2>
+      </footer>
+    </>
+  )
+}
+
+export default App

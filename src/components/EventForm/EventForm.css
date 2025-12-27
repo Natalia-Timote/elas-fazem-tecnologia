@@ -1,0 +1,44 @@
+form {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 32px;
+    padding: 32px 24px;
+    border-radius: 16px;
+    background-color: #D16BA5;
+}
+
+form section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form input {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: solid 1px #2B2B2B;
+    border-radius: 16px;
+}
+
+form input::placeholder {
+    color: #2B2B2B;
+}
+
+.form-btn {
+    background-color: #F8E6F1;
+    color: #2B2B2B;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 160px;
+    align-self: center;
+}
