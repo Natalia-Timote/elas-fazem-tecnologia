@@ -1,22 +1,41 @@
+import Fieldset from "../Fieldset";
 import "./EventForm.css";
 
-export default function EventForm() {
+interface EventFormProps {
+    children: React.ReactNode
+}
+
+export default function EventForm({ children }: EventFormProps) {
     return (
         <form>
-            <h2>Preencha para criar um evento:</h2>
+            <h2>{children}</h2>
             <section>
-                <fieldset>
-                    <label htmlFor="name">Qual o nome do evento?</label>
-                    <input type="text" name="name" id="event-name" placeholder="Nome do evento" />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="date">Data do evento</label>
-                    <input type="date" name="date" id="event-date" placeholder="xx/xx/xxxx" />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="theme">Tema do evento</label>
-                    <input type="text" name="theme" id="event-theme" placeholder="Selecione uma opção" />
-                </fieldset>
+                <Fieldset 
+                    fieldsetName="name" 
+                    inputType="text" 
+                    inputId="event-name" 
+                    inputPlaceholder="Nome do evento"
+                >
+                    Qual o nome do evento?
+                </Fieldset>
+
+                <Fieldset 
+                    fieldsetName="date" 
+                    inputType="date" 
+                    inputId="event-date" 
+                    inputPlaceholder="xx/xx/xxxx"
+                >
+                    Data do evento
+                </Fieldset>
+
+                <Fieldset 
+                    fieldsetName="theme" 
+                    inputType="text" 
+                    inputId="event-theme" 
+                    inputPlaceholder="Selecione uma opção"
+                >
+                    Tema do evento
+                </Fieldset>
             </section>
             <button className="form-btn">Criar evento</button>
         </form>
