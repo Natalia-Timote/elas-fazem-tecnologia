@@ -11,9 +11,6 @@ function App() {
         <img src="./banner-home.jpg" alt="Banner com ilustração de mulheres diversas utilizando tecnologia." />
         <EventForm>Preencha para criar um evento:</EventForm>
       </main>
-      <footer>
-      <h2>oi</h2>
-      </footer>
     </>
   )
 }

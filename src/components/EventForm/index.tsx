@@ -1,3 +1,4 @@
+import Button from "../Button";
 import Fieldset from "../Fieldset";
 import "./EventForm.css";
 
@@ -36,8 +37,8 @@ export default function EventForm({ children }: EventFormProps) {
                 >
                     Tema do evento
                 </Fieldset>
+                <Button>Criar evento</Button>
             </section>
-            <button className="form-btn">Criar evento</button>
         </form>
     )
 }

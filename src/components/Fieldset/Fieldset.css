@@ -1,0 +1,16 @@
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form input {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: solid 1px #2B2B2B;
+    border-radius: 16px;
+}
+
+form input::placeholder {
+    color: #2B2B2B;
+}
