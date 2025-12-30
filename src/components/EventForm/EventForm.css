@@ -6,11 +6,17 @@ form {
     gap: 32px;
     padding: 32px 24px;
     border-radius: 16px;
-    background-color: #D16BA5;
+    background: linear-gradient(180deg, #D16BA5 0%, #c1297f 100%);
 }
 
 form section {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
