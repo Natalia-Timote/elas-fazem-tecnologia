@@ -13,11 +13,8 @@ p {
 header {
   display: flex;
   justify-content: center;
+  padding: 16px;
   background: linear-gradient(180deg, #D16BA5 0%, #c1297f 100%);
-}
-
-header img {
-  height: 8rem;
 }
 
 main {
