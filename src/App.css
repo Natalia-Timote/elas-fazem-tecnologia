@@ -19,6 +19,13 @@ header {
 
 main {
   background-color: #F6F2EE;
+}
+
+main img {
+  width: 100%;
+}
+
+.main-first {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +33,10 @@ main {
   gap: 64px;
 }
 
-main img {
-  width: 100%;
+.themes {
+  margin: 64px 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  justify-content: flex-start;
 }
