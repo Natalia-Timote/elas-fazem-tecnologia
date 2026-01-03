@@ -1,0 +1,44 @@
+.event-card {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    width: 240px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #D16BA5 0%, #c1297f 100%);
+}
+
+.event-card-img {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+}
+
+.event-card-infos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    margin: 24px 16px;
+}
+
+.event-card-tag {
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #D16BA5;
+    padding: 8px;
+}
+
+.event-card-date {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.event-card-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.event-card-description {
+    text-align: center;
+    font-size: 16px;
+}

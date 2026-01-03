@@ -10,7 +10,7 @@ interface EventFormProps {
 
 export default function EventForm({ children }: EventFormProps) {
     return (
-        <form>
+        <form action={}>
             <h2>{children}</h2>
             <section>
                 <fieldset>
