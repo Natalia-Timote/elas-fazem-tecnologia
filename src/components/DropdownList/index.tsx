@@ -1,13 +1,13 @@
+import type { EventFormProps } from '../EventForm';
 import './DropdownList.css';
 
-interface DropdownListProps {
-    children: React.ReactNode
-}
-
-export default function DropdownList({ children }: DropdownListProps) {
+export default function DropdownList({ themes }: EventFormProps) {
     return (
         <select name="dropdownList" id="dropdownList">
-            {children}
+            <option value="" disabled selected>Selecione uma opção</option>
+            {themes.map((theme) => (
+                <option key={theme.id} value={theme.title}>{theme.title}</option>
+            ))}
         </select>
     )
 }

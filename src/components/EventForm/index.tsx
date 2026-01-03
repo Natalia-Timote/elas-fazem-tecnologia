@@ -4,14 +4,19 @@ import Input from "../Input";
 import Label from "../Label";
 import "./EventForm.css";
 
-interface EventFormProps {
-    children: React.ReactNode
+interface Themes {
+    id: number,
+    title: string
 }
 
-export default function EventForm({ children }: EventFormProps) {
+export interface EventFormProps {
+    themes: Themes[]
+}
+
+export default function EventForm({ themes }: EventFormProps) {
     return (
-        <form action={}>
-            <h2>{children}</h2>
+        <form>
+            <h2>Preencha para criar um evento:</h2>
             <section>
                 <fieldset>
                     <Label fieldsetName="name">Qual o nome do evento?</Label>
@@ -20,6 +25,16 @@ export default function EventForm({ children }: EventFormProps) {
                         inputType="text"
                         inputId="event-name"
                         inputPlaceholder="Nome do evento"
+                    ></Input>
+                </fieldset>
+
+                <fieldset>
+                    <Label fieldsetName="image">Qual será a imagem de capa do evento?</Label>
+                    <Input
+                        fieldsetName="image"
+                        inputType="text"
+                        inputId="event-image"
+                        inputPlaceholder="Insira a URL da imagem"
                     ></Input>
                 </fieldset>
 
@@ -35,15 +50,7 @@ export default function EventForm({ children }: EventFormProps) {
 
                 <fieldset>
                     <Label fieldsetName="theme">Tema do evento</Label>
-                    <DropdownList>
-                        <option value="" disabled selected>Selecione uma opção</option>
-                        <option value="Backend">Backend</option>
-                        <option value="Cloud">Cloud</option>
-                        <option value="Data Science">Data Science</option>
-                        <option value="Devops">Devops</option>
-                        <option value="Front-end">Front-end</option>
-                        <option value="IA">IA</option>
-                    </DropdownList>
+                    <DropdownList themes={themes} />
                 </fieldset>
                 <Button>Criar evento</Button>
             </section>

@@ -149,7 +149,7 @@ function App() {
       <main>
         <div className='main-first'>
           <Banner image="./banner-home.jpg" title="Banner com ilustração de mulheres diversas utilizando tecnologia."></Banner>
-          <EventForm>Preencha para criar um evento:</EventForm> 
+          <EventForm themes={themes}></EventForm> 
         </div>
         <section className='themes'>
           {themes.map((theme) => {
