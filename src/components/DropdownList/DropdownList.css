@@ -4,6 +4,12 @@ select {
     border: solid 1px #2B2B2B;
     border-radius: 16px;
 }
+
 select::placeholder {
     color: #2B2B2B;
+}
+
+option {
+    height: fit-content;
+    font-weight: 400;
 }

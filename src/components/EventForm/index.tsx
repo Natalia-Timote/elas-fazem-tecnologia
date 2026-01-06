@@ -14,8 +14,20 @@ export interface EventFormProps {
 }
 
 export default function EventForm({ themes }: EventFormProps) {
+    function formSubmission(formData: FormData) {
+        const event = {
+            title: formData.get("name"),
+            image: formData.get("image"),
+            theme: themes.find((theme) => {
+                return theme.id === theme.id
+            }),
+            date: new Date(formData.get("date") as string)
+        }
+        return console.log(event)
+    }
+
     return (
-        <form>
+        <form action={formSubmission}>
             <h2>Preencha para criar um evento:</h2>
             <section>
                 <fieldset>
