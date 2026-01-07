@@ -2,7 +2,7 @@ import './App.css'
 import Logo from './assets/Logo'
 import Banner from './components/Banner'
 import EventCard from './components/EventCard'
-import EventForm from './components/EventForm'
+import EventForm, { type Event } from './components/EventForm'
 import Theme from './components/Theme'
 
 function App() {
@@ -141,6 +141,11 @@ function App() {
     },
   ]
 
+  function addEvent(event: Event) {
+    events.push(event);
+    console.log(events)
+  }
+
   return (
     <>
       <header>
@@ -149,7 +154,7 @@ function App() {
       <main>
         <div className='main-first'>
           <Banner image="./banner-home.jpg" title="Banner com ilustração de mulheres diversas utilizando tecnologia."></Banner>
-          <EventForm themes={themes}></EventForm> 
+          <EventForm themes={themes} whenSubmit={addEvent}></EventForm> 
         </div>
         <section className='themes'>
           {themes.map((theme) => {

@@ -4,26 +4,42 @@ import Input from "../Input";
 import Label from "../Label";
 import "./EventForm.css";
 
+export interface Event {
+    title: string,
+    image: string,
+    theme: string,
+    date: Date,
+    description: string,
+}
+
 interface Themes {
     id: number,
     title: string
 }
-
-export interface EventFormProps {
+export interface DropdownListProps {
     themes: Themes[]
 }
 
-export default function EventForm({ themes }: EventFormProps) {
+export interface EventFormProps {
+    themes: Themes[],
+
+    whenSubmit: (event: Event) => void
+}
+
+export default function EventForm({ themes, whenSubmit }: EventFormProps) {
     function formSubmission(formData: FormData) {
-        const event = {
-            title: formData.get("name"),
-            image: formData.get("image"),
-            theme: themes.find((theme) => {
-                return theme.id === theme.id
-            }),
-            date: new Date(formData.get("date") as string)
+        const themeId = Number(formData.get("theme"))
+        const foundTheme = themes.find(theme => theme.id === themeId)
+        const themeTitle = foundTheme ? foundTheme.title : ""
+
+        const event: Event = {
+            title: formData.get("name") as string,
+            image: formData.get("image") as string,
+            theme: themeTitle,
+            date: new Date(formData.get("date") as string),
+            description: formData.get("description") as string
         }
-        return console.log(event)
+        whenSubmit(event)
     }
 
     return (
@@ -47,6 +63,16 @@ export default function EventForm({ themes }: EventFormProps) {
                         inputType="text"
                         inputId="event-image"
                         inputPlaceholder="Insira a URL da imagem"
+                    ></Input>
+                </fieldset>
+
+                <fieldset>
+                    <Label fieldsetName="description">Qual será a descrição do evento?</Label>
+                    <Input
+                        fieldsetName="description"
+                        inputType="text"
+                        inputId="event-description"
+                        inputPlaceholder="Insira a descrição do evento"
                     ></Input>
                 </fieldset>
 
