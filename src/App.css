@@ -3,6 +3,7 @@
 h2 {
   font-family: "Playfair Display", serif;
   font-size: 24px;
+  color: #F9FAFB;
 }
 
 p {
@@ -14,7 +15,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 16px;
-  background: linear-gradient(180deg, #D16BA5 0%, #c1297f 100%);
+  background: linear-gradient(160deg, #D16BA5, #6A5ACD, #2E2A6F);
 }
 
 main {
@@ -34,9 +35,19 @@ main img {
 }
 
 .themes {
-  margin: 64px 360px;
+  margin: 64px 240px;
   display: flex;
   flex-direction: column;
   gap: 64px;
   justify-content: flex-start;
+}
+
+.event-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  gap: 24px;
 }

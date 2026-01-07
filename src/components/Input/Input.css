@@ -1,10 +1,14 @@
 input {
     padding: 8px 16px;
     background-color: transparent;
-    border: solid 1px #2B2B2B;
+    border: solid 1px #F9FAFB;
     border-radius: 16px;
 }
 
 input::placeholder {
-    color: #2B2B2B;
+    color: #F9FAFB;
+}
+
+input[type="date"] {
+  color: #F9FAFB;
 }

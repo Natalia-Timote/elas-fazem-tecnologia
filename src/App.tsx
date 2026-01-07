@@ -42,98 +42,98 @@ function App() {
       description: "Interfaces acessíveis criadas por mulheres desenvolvedoras"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-2.jpg",
       title: "Mulheres no Backend",
       theme: themes[0].title,
       date: new Date("2026/03/16"),
       description: "Lógica, APIs e carreira no desenvolvimento backend"
     },
     {
-      image: "./events/event-1.jpg",
-      title: "Mulheres & Inteligência Artificial",
+      image: "./events/event-3.jpg",
+      title: "Mulheres & IA",
       theme: themes[5].title,
       date: new Date("2026/04/29"),
       description: "IA prática, ética e inclusiva para mulheres"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-4.jpg",
       title: "Dados com Propósito",
       theme: themes[2].title,
       date: new Date("2026/03/24"),
       description: "Análise de dados para resolver problemas reais"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-5.jpg",
       title: "Cloud para Elas",
       theme: themes[1].title,
       date: new Date("2026/05/08"),
       description: "Primeiros passos em computação em nuvem"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-6.jpg",
       title: "DevOps para Mulheres",
       theme: themes[3].title,
       date: new Date("2026/07/28"),
       description: "Integração, automação e cultura DevOps"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-7.jpg",
       title: "UI & Código",
       theme: themes[4].title,
       date: new Date("2026/04/12"),
       description: "Criando interfaces modernas, responsivas e acessíveis"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-8.jpg",
       title: "APIs para Iniciantes",
       theme: themes[0].title,
       date: new Date("2026/09/27"),
       description: "Construindo serviços backend do zero"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-9.jpg",
       title: "Elas em Dados",
       theme: themes[2].title,
       date: new Date("2026/07/18"),
       description: "Dados, visualização e tomada de decisão"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-10.jpg",
       title: "IA na Prática",
       theme: themes[5].title,
       date: new Date("2026/10/22"),
       description: "Aplicações reais de inteligência artificial"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-11.jpg",
       title: "Infraestrutura na Nuvem",
       theme: themes[1].title,
       date: new Date("2026/12/02"),
       description: "Deploy, escalabilidade e serviços em cloud"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-12.jpg",
       title: "Deploy sem Medo",
       theme: themes[3].title,
       date: new Date("2026/11/28"),
       description: "Automatizando entregas com boas práticas"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-13.jpg",
       title: "Acessibilidade no Front",
       theme: themes[4].title,
       date: new Date("2026/06/15"),
       description: "Interfaces inclusivas para todas as pessoas"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-14.jpg",
       title: "Segurança para Elas",
       theme: themes[0].title,
       date: new Date("2026/02/25"),
       description: "Princípios básicos de segurança no backend"
     },
     {
-      image: "./events/event-1.jpg",
+      image: "./events/event-15.jpg",
       title: "IA para Educadoras",
       theme: themes[5].title,
       date: new Date("2026/06/14"),
@@ -154,13 +154,23 @@ function App() {
       <main>
         <div className='main-first'>
           <Banner image="./banner-home.jpg" title="Banner com ilustração de mulheres diversas utilizando tecnologia."></Banner>
-          <EventForm themes={themes} whenSubmit={addEvent}></EventForm> 
+          <EventForm themes={themes} whenSubmit={addEvent}></EventForm>
         </div>
         <section className='themes'>
           {themes.map((theme) => {
-            return <Theme key={theme.id} theme={theme} />
+            return (
+              <section key={theme.id}>
+                <Theme theme={theme} />
+                <div className='event-list'>
+                  {events.map((theme, index) => {
+                    return (
+                      <EventCard event={theme} key={index}></EventCard>
+                    )
+                  })}
+                </div>
+              </section>
+            )
           })}
-        <EventCard event={events[0]}></EventCard>
         </section>
       </main>
     </>
