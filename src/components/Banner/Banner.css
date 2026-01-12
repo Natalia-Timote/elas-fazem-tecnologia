@@ -1,0 +1,11 @@
+.banner {
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(160deg, #D16BA5, #6A5ACD, #2E2A6F);
+}
+
+.banner-image {
+    width: 90%;
+    border-radius: 16px;
+}

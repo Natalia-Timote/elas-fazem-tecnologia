@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Logo from './assets/Logo'
 import Banner from './components/Banner'
@@ -33,7 +34,7 @@ function App() {
     }
   ]
 
-  const events = [
+  const [events, setEvents] = useState([
     {
       image: "./events/event-1.jpg",
       title: "Elas no Front-End",
@@ -139,11 +140,10 @@ function App() {
       date: new Date("2026/06/14"),
       description: "Inteligência artificial aplicada à educação"
     },
-  ]
+  ])
 
   function addEvent(event: Event) {
-    events.push(event);
-    console.log(events)
+    setEvents([...events, event])
   }
 
   return (
@@ -158,21 +158,31 @@ function App() {
         </div>
         <section className='themes'>
           {themes.map((theme) => {
+            if (!events.some(function(event) {
+              return event.theme == theme.title
+            })) {
+              return null
+            }
             return (
               <section key={theme.id}>
                 <Theme theme={theme} />
                 <div className='event-list'>
-                  {events.map((theme, index) => {
-                    return (
-                      <EventCard event={theme} key={index}></EventCard>
+                  {events
+                    .filter(event => event.theme === theme.title)
+                    .map(event => (
+                      <EventCard event={event} key={event.title}></EventCard>
                     )
-                  })}
+                    )}
                 </div>
               </section>
             )
           })}
         </section>
       </main>
+      <footer>
+        <p>Projeto desenvolvido por Natalia M. Timote, com conhecimentos de curso da Alura.</p>
+        <p>Imagens geradas pelo Canva IA.</p>
+      </footer>
     </>
   )
 }

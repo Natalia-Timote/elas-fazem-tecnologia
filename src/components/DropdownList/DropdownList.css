@@ -11,6 +11,7 @@ select::placeholder {
 }
 
 option {
+    color: #2E2A6F;
     height: fit-content;
     font-weight: 400;
 }
