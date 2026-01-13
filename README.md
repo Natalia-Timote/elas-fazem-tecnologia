@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+## 🌐 Elas Fazem Tecnologia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Elas Fazem Tecnologia** é uma aplicação web desenvolvida com **React 19** que funciona como um **hub de eventos de tecnologia voltados para mulheres.**
+O projeto organiza eventos por **temas técnicos** e permite o **cadastro dinâmico de novos eventos**, promovendo visibilidade, inclusão e acesso à informação no ecossistema tech.
+A aplicação foi pensada para ir além de um exercício técnico, simulando um **produto real**, com regras claras de negócio, organização de dados e foco em experiência do usuário.
 
-Currently, two official plugins are available:
+![Static Badge](https://img.shields.io/badge/Conclu%C3%ADdo-label?style=for-the-badge&label=Status) ![Static Badge](https://img.shields.io/badge/Alura-label?style=for-the-badge&label=Curso&color=%23000080)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<hr>
 
-## React Compiler
+## 🚀 Sobre o Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este projeto foi desenvolvido durante o curso da Alura:
 
-## Expanding the ESLint configuration
+* "React 19: JSX, componentes, form action e useState"
+  
+A proposta inicial do curso foi adaptada para um contexto autoral, com foco em eventos de tecnologia para mulheres, reforçando meu interesse em desenvolvimento front-end aliado a impacto social e organização de informações complexas de forma clara.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+A aplicação permite:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Visualizar eventos de tecnologia organizados por temas
+* Cadastrar novos eventos por meio de um formulário dinâmico
+* Exibir apenas os temas que possuem eventos cadastrados
+* Manter a interface organizada e reativa às alterações de estado
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📚 Objetivos do Projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Aplicar os fundamentos do **React 19** em um cenário prático
+* Trabalhar com **componentização, props e estado local**
+* Desenvolver formulários interativos utilizando **FormData**
+* Aplicar **renderização condicional** baseada em regras de negócio
+* Garantir **imutabilidade de estado** com useState
+* Criar uma aplicação organizada, reutilizável e escalável
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧩 Funcionalidades
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **Listagem de eventos por tema:** Front-end; Back-end; Cloud; Data Science; DevOps; Inteligência Artificial
+* **Cadastro de novos eventos com:** Nome do evento; Imagem de capa; Descrição; Data; Tema
+* 🔄 Atualização automática da interface após o cadastro
+* 🚫 Ocultação de temas sem eventos cadastrados
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologias Utilizadas
+
+<p align="left"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" width="80" height="80"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" width="80" height="80"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="80" height="80"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" width="80" height="80"/> </p>
+
+**Tecnologias e conceitos aplicados no projeto:**
+* **React 19 –** criação de componentes funcionais e construção de interfaces dinâmicas
+* **JavaScript (ES6+) –** manipulação de dados, lógica de aplicação e eventos
+* **JSX –** estruturação declarativa da interface
+* **Vite –** ambiente de desenvolvimento rápido e otimizado
+* **Hooks (useState) –** gerenciamento de estado local e imutabilidade
+* **FormData –** captura e tratamento de dados de formulários
+* **CSS –** estilização, organização visual e responsividade básica
+  
+## 🖼️ Visualização do Projeto
+
+Uma prévia das principais funcionalidades da aplicação:
+
+**🏠 Página Inicial**
+
+Interface com destaque para a logo e o banner.
+
+<img src="/public/eft-home.png" alt="Página inicial" width="400"/>
+
+**📝 Cadastro de Evento**
+
+Formulário interativo para criação de novos eventos, com atualização dinâmica da lista.
+
+<img src="/public/eft-form.png" alt="Cadastro de Evento" width="200"/>
+
+**📅 Listagem por Tema**
+
+Eventos organizados visualmente por área de atuação técnica.
+
+<img src="/public/eft-theme1.png" alt="Listagem por Tema" width="400"/>
+<img src="/public/eft-theme2.png" alt="Listagem por Tema" width="400"/>
+
+**🌐 Acesse o Projeto Online**
+
+O projeto está disponível para visualização na Vercel:
+
+<a href="https://elas-fazem-tecnologia.vercel.app/" target="_blank">![Static Badge](https://img.shields.io/badge/Vercel-project?style=for-the-badge&color=A91079)</a>
+
+## 👩‍💻 Sobre a Autora
+
+Desenvolvido por **Natalia Mirian Timote**, desenvolvedora front-end e educadora em tecnologia e programação.
+
+<a href="https://linkedin.com/in/nataliamiriantimote" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" height="40" /></a>
+<a href="https://github.com/Natalia-Timote" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="40" height="40" /></a>
+
+          
+
