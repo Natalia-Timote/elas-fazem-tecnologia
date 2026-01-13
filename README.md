@@ -34,7 +34,7 @@ A aplicação permite:
 
 ## 🧩 Funcionalidades
 
-* **Listagem de eventos por tema:** Front-end; Back-end; Cloud; Data Science; DevOps; Inteligência Artificial
+* **Listagem de eventos por tema:** Back-end; Cloud; Data Science; DevOps; Front-end; Inteligência Artificial
 * **Cadastro de novos eventos com:** Nome do evento; Imagem de capa; Descrição; Data; Tema
 * 🔄 Atualização automática da interface após o cadastro
 * 🚫 Ocultação de temas sem eventos cadastrados
@@ -50,7 +50,7 @@ A aplicação permite:
 * **Vite –** ambiente de desenvolvimento rápido e otimizado
 * **Hooks (useState) –** gerenciamento de estado local e imutabilidade
 * **FormData –** captura e tratamento de dados de formulários
-* **CSS –** estilização, organização visual e responsividade básica
+* **CSS –** estilização e organização visual
   
 ## 🖼️ Visualização do Projeto
 
