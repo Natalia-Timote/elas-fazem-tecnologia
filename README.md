@@ -83,7 +83,7 @@ O projeto está disponível para visualização na Vercel:
 
 ## 👩‍💻 Sobre a Autora
 
-Desenvolvido por **Natalia Mirian Timote**, desenvolvedora front-end e educadora em tecnologia e programação.
+Desenvolvido por **Natalia Mirian Timote**, desenvolvedora e educadora em tecnologia e programação.
 
 <a href="https://linkedin.com/in/nataliamiriantimote" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" height="40" /></a>
 <a href="https://github.com/Natalia-Timote" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="40" height="40" /></a>
