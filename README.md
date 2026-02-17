@@ -16,13 +16,6 @@ Este projeto foi desenvolvido durante o curso da Alura:
   
 A proposta inicial do curso foi adaptada para um contexto autoral, com foco em eventos de tecnologia para mulheres, reforçando meu interesse em desenvolvimento front-end aliado a impacto social e organização de informações complexas de forma clara.
 
-A aplicação permite:
-
-* Visualizar eventos de tecnologia organizados por temas
-* Cadastrar novos eventos por meio de um formulário dinâmico
-* Exibir apenas os temas que possuem eventos cadastrados
-* Manter a interface organizada e reativa às alterações de estado
-
 ## 📚 Objetivos do Projeto
 
 * Aplicar os fundamentos do **React 19** em um cenário prático
@@ -34,10 +27,10 @@ A aplicação permite:
 
 ## 🧩 Funcionalidades
 
-* **Listagem de eventos por tema:** Back-end; Cloud; Data Science; DevOps; Front-end; Inteligência Artificial
-* **Cadastro de novos eventos com:** Nome do evento; Imagem de capa; Descrição; Data; Tema
-* 🔄 Atualização automática da interface após o cadastro
-* 🚫 Ocultação de temas sem eventos cadastrados
+* Visualizar eventos de tecnologia organizados por temas
+* Cadastrar novos eventos por meio de um formulário dinâmico
+* Exibir apenas os temas que possuem eventos cadastrados
+* Manter a interface organizada e reativa às alterações de estado
 
 ## 🛠️ Tecnologias Utilizadas
 
